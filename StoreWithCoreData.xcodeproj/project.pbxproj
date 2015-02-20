@@ -418,6 +418,7 @@
 				6BA4F89E1A96A9E9008301C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BA4F89F1A96A9E9008301C3 /* Build configuration list for PBXNativeTarget "StoreWithCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +427,7 @@
 				6BA4F8A11A96A9E9008301C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
