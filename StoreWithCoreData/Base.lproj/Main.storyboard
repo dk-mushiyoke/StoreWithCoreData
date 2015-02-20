@@ -8,13 +8,13 @@
         <!--Devices-->
         <scene sceneID="8LY-Y5-6kc">
             <objects>
-                <tableViewController id="oIM-EM-kTb" sceneMemberID="viewController">
+                <tableViewController id="oIM-EM-kTb" customClass="DeviceTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rBG-Ko-ORG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="WaK-N0-fQ5" detailTextLabel="1WI-AX-sLx" style="IBUITableViewCellStyleValue1" id="9Ww-jq-lGf">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="deviceCell" textLabel="WaK-N0-fQ5" detailTextLabel="1WI-AX-sLx" style="IBUITableViewCellStyleValue1" id="9Ww-jq-lGf">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Ww-jq-lGf" id="J8A-S8-CWz">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="798" y="419"/>
         </scene>
-        <!--View Controller-->
+        <!--Device Detail View Controller-->
         <scene sceneID="R2j-eg-pfT">
             <objects>
-                <viewController id="3lO-2J-mOc" sceneMemberID="viewController">
+                <viewController id="3lO-2J-mOc" customClass="DeviceDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8VA-mY-bXL"/>
                         <viewControllerLayoutGuide type="bottom" id="CdL-e2-Yy8"/>
@@ -68,8 +68,16 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Detail" id="BWt-e7-JM5">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="JAs-4d-u0N"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="xql-AL-XcI"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="JAs-4d-u0N">
+                                            <connections>
+                                                <action selector="cancel:" destination="3lO-2J-mOc" id="Cxf-Ej-a3u"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="xql-AL-XcI">
+                                            <connections>
+                                                <action selector="save:" destination="3lO-2J-mOc" id="wdB-kW-V71"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -113,6 +121,11 @@
                             <constraint firstItem="aGQ-Bi-E20" firstAttribute="trailing" secondItem="Bsk-e4-xUe" secondAttribute="trailingMargin" id="y8b-Ej-t0f"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="companyTextField" destination="aGQ-Bi-E20" id="chq-yf-CB0"/>
+                        <outlet property="nameTextField" destination="t6G-F7-i8I" id="PT0-Ii-Awe"/>
+                        <outlet property="versionTextField" destination="355-8y-OTI" id="1Eh-9V-V02"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Quc-eu-e6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

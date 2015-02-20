@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DeviceTableViewController.h
 //  StoreWithCoreData
 //
 //  Created by EduardoUrso on 2/19/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DeviceTableViewController : UITableViewController
 
 @end
-

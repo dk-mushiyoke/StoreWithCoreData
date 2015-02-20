@@ -10,11 +10,12 @@
 		6BA4F87C1A96A9E9008301C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4F87B1A96A9E9008301C3 /* main.m */; };
 		6BA4F87F1A96A9E9008301C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4F87E1A96A9E9008301C3 /* AppDelegate.m */; };
 		6BA4F8821A96A9E9008301C3 /* StoreWithCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4F8801A96A9E9008301C3 /* StoreWithCoreData.xcdatamodeld */; };
-		6BA4F8851A96A9E9008301C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4F8841A96A9E9008301C3 /* ViewController.m */; };
 		6BA4F8881A96A9E9008301C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA4F8861A96A9E9008301C3 /* Main.storyboard */; };
 		6BA4F88A1A96A9E9008301C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA4F8891A96A9E9008301C3 /* Images.xcassets */; };
 		6BA4F88D1A96A9E9008301C3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA4F88B1A96A9E9008301C3 /* LaunchScreen.xib */; };
 		6BA4F8991A96A9E9008301C3 /* StoreWithCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4F8981A96A9E9008301C3 /* StoreWithCoreDataTests.m */; };
+		6BA4F8A41A96B0D4008301C3 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4F8A31A96B0D4008301C3 /* DeviceDetailViewController.m */; };
+		6BA4F8A71A96B261008301C3 /* DeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4F8A61A96B261008301C3 /* DeviceTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +35,16 @@
 		6BA4F87D1A96A9E9008301C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6BA4F87E1A96A9E9008301C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6BA4F8811A96A9E9008301C3 /* StoreWithCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StoreWithCoreData.xcdatamodel; sourceTree = "<group>"; };
-		6BA4F8831A96A9E9008301C3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6BA4F8841A96A9E9008301C3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6BA4F8871A96A9E9008301C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BA4F8891A96A9E9008301C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6BA4F88C1A96A9E9008301C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6BA4F8921A96A9E9008301C3 /* StoreWithCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreWithCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA4F8971A96A9E9008301C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BA4F8981A96A9E9008301C3 /* StoreWithCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreWithCoreDataTests.m; sourceTree = "<group>"; };
+		6BA4F8A21A96B0D4008301C3 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetailViewController.h; sourceTree = "<group>"; };
+		6BA4F8A31A96B0D4008301C3 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
+		6BA4F8A51A96B261008301C3 /* DeviceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewController.h; sourceTree = "<group>"; };
+		6BA4F8A61A96B261008301C3 /* DeviceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +88,15 @@
 			children = (
 				6BA4F87D1A96A9E9008301C3 /* AppDelegate.h */,
 				6BA4F87E1A96A9E9008301C3 /* AppDelegate.m */,
-				6BA4F8831A96A9E9008301C3 /* ViewController.h */,
-				6BA4F8841A96A9E9008301C3 /* ViewController.m */,
+				6BA4F8A21A96B0D4008301C3 /* DeviceDetailViewController.h */,
+				6BA4F8A31A96B0D4008301C3 /* DeviceDetailViewController.m */,
 				6BA4F8861A96A9E9008301C3 /* Main.storyboard */,
 				6BA4F8891A96A9E9008301C3 /* Images.xcassets */,
 				6BA4F88B1A96A9E9008301C3 /* LaunchScreen.xib */,
 				6BA4F8801A96A9E9008301C3 /* StoreWithCoreData.xcdatamodeld */,
 				6BA4F8791A96A9E9008301C3 /* Supporting Files */,
+				6BA4F8A51A96B261008301C3 /* DeviceTableViewController.h */,
+				6BA4F8A61A96B261008301C3 /* DeviceTableViewController.m */,
 			);
 			path = StoreWithCoreData;
 			sourceTree = "<group>";
@@ -224,7 +229,8 @@
 			files = (
 				6BA4F8821A96A9E9008301C3 /* StoreWithCoreData.xcdatamodeld in Sources */,
 				6BA4F87F1A96A9E9008301C3 /* AppDelegate.m in Sources */,
-				6BA4F8851A96A9E9008301C3 /* ViewController.m in Sources */,
+				6BA4F8A41A96B0D4008301C3 /* DeviceDetailViewController.m in Sources */,
+				6BA4F8A71A96B261008301C3 /* DeviceTableViewController.m in Sources */,
 				6BA4F87C1A96A9E9008301C3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
