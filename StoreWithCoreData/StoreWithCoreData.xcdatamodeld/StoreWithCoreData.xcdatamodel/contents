@@ -6,6 +6,6 @@
         <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Device" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Device" positionX="-14697" positionY="-6300" width="128" height="90"/>
     </elements>
 </model>

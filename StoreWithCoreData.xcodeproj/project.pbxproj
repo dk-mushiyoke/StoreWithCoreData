@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B8055511A978C2800E60793 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8055501A978C2800E60793 /* DatabaseManager.m */; };
 		6BA4F87C1A96A9E9008301C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4F87B1A96A9E9008301C3 /* main.m */; };
 		6BA4F87F1A96A9E9008301C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4F87E1A96A9E9008301C3 /* AppDelegate.m */; };
 		6BA4F8821A96A9E9008301C3 /* StoreWithCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BA4F8801A96A9E9008301C3 /* StoreWithCoreData.xcdatamodeld */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B80554F1A978C2800E60793 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		6B8055501A978C2800E60793 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		6BA4F8761A96A9E9008301C3 /* StoreWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BA4F87A1A96A9E9008301C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BA4F87B1A96A9E9008301C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				6BA4F8791A96A9E9008301C3 /* Supporting Files */,
 				6BA4F8A51A96B261008301C3 /* DeviceTableViewController.h */,
 				6BA4F8A61A96B261008301C3 /* DeviceTableViewController.m */,
+				6B80554F1A978C2800E60793 /* DatabaseManager.h */,
+				6B8055501A978C2800E60793 /* DatabaseManager.m */,
 			);
 			path = StoreWithCoreData;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				6BA4F87F1A96A9E9008301C3 /* AppDelegate.m in Sources */,
 				6BA4F8A41A96B0D4008301C3 /* DeviceDetailViewController.m in Sources */,
 				6BA4F8A71A96B261008301C3 /* DeviceTableViewController.m in Sources */,
+				6B8055511A978C2800E60793 /* DatabaseManager.m in Sources */,
 				6BA4F87C1A96A9E9008301C3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

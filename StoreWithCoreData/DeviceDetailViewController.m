@@ -7,7 +7,7 @@
 //
 
 #import "DeviceDetailViewController.h"
-#import <CoreData/CoreData.h>
+#import "DatabaseManager.h"
 
 @interface DeviceDetailViewController ()
 
@@ -25,15 +25,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSManagedObjectContext *)managedObjectContext {
-    NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
-    if ([delegate performSelector:@selector(managedObjectContext)]) {
-        context = [delegate managedObjectContext];
-    }
-    return context;
-}
-
 - (IBAction)cancel:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -46,19 +37,17 @@
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Opss" message:@"you need to fill all the fields" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
         
-    }else{
-        
-        NSManagedObjectContext *context = [self managedObjectContext];
+    } else {
         
         // Create a new managed object
-        NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Device" inManagedObjectContext:context];
+        NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Device" inManagedObjectContext:[[DatabaseManager sharedInstance] managedObjectContext]];
         [newDevice setValue:self.nameTextField.text forKey:@"name"];
         [newDevice setValue:self.versionTextField.text forKey:@"version"];
         [newDevice setValue:self.companyTextField.text forKey:@"company"];
         
         NSError *error = nil;
         // Save the object to persistent store
-        if (![context save:&error]) {
+        if (![[[DatabaseManager sharedInstance] managedObjectContext] save:&error]) {
             NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
         }
         [self dismissViewControllerAnimated:YES completion:nil];
