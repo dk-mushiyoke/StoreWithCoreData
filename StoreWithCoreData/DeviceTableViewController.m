@@ -27,9 +27,9 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     
     // Fetch the devices from persistent data store
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Device"];
@@ -67,5 +67,26 @@
 
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSManagedObject *device = self.devices[indexPath.row];
+    [[DatabaseManager sharedInstance].managedObjectContext deleteObject:device];
+    NSError *error = nil;
+    // Delete the object from persistent store
+    if (![[[DatabaseManager sharedInstance] managedObjectContext] save:&error]) {
+        NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+    }
+    [self.devices removeObjectAtIndex:indexPath.row];
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+#pragma mark - Table View Delegate
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    return UITableViewCellEditingStyleDelete;
+}
+
 
 @end
